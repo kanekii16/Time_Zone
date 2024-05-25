@@ -20,11 +20,12 @@ function handleBtnEvent(e){
     }else{
         const result_form = document.getElementById("result_form")
 
+
         result_form.setAttribute("style","display:hidden")
+
 
         fetchDetails(city)
         input_feild.value = "";
-
     }
 }
 
@@ -43,7 +44,6 @@ function fetchDetails(city){
     }else{
         const warn = document.getElementsByClassName("city_empty")[0];
         warn.classList.toggle("toggle");
-
     }
    
   
@@ -55,21 +55,19 @@ function fetchDetails(city){
 
 
 
-function renderDetails(data_set){
+function renderDetails(set){
 
     const result_form = document.getElementById("result_form")
 
-    
-    
-    result_form["time_zone"].value = data_set.timezone.name
-    result_form["lat"].value = data_set.lat
-    result_form["long"].value = data_set.lon
-    result_form["offset_std"].value = data_set.timezone.offset_STD
-    result_form["offset_dst"].value = data_set.timezone.offset_DST
-    result_form["offset_dst_sec"].value = data_set.timezone.offset_DST_seconds
-    result_form["country"].value = data_set.country
-    result_form["post_code"].value = data_set.postcode
-    result_form["city"].value = data_set.county
+    result_form["time_zone"].value = set.timezone.name
+    result_form["lat"].value = set.lat
+    result_form["long"].value = set.lon
+    result_form["offset_std"].value = set.timezone.offset_STD
+    result_form["offset_dst"].value = set.timezone.offset_DST
+    result_form["offset_dst_sec"].value = set.timezone.offset_DST_seconds
+    result_form["country"].value = set.country
+    result_form["post_code"].value = set.postcode
+    result_form["city"].value = set.county
 
     result_form.setAttribute("style","display:block")
 
