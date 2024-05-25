@@ -41,16 +41,25 @@ form{
     padding: 20px;
 }
 
+
+
+
 form > input {
-    width: 200px;
+   
     margin: 10px;
     background-color: black;
     color: gray;
+    
 
 }
 
 .display_form{
     display: none;
+}
+
+
+.display_form > input{
+    width: 200px;
 }
 
 .city_empty{

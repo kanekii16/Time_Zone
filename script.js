@@ -18,8 +18,13 @@ function handleBtnEvent(e){
         const warn = document.getElementsByClassName("city_empty")[0];
         warn.classList.toggle("toggle");
     }else{
+        const result_form = document.getElementById("result_form")
+
+        result_form.setAttribute("style","display:hidden")
+
         fetchDetails(city)
         input_feild.value = "";
+
     }
 }
 
@@ -31,9 +36,16 @@ function fetchDetails(city){
     fetch(url)
     .then(response => response.json())
     .then(result => {
-    const data_set = result.results[2]
-    renderDetails(data_set)
-    console.log(data_set)
+    const data_set = result.results[0]
+    if (data_set){
+        renderDetails(data_set)
+        console.log(data_set)
+    }else{
+        const warn = document.getElementsByClassName("city_empty")[0];
+        warn.classList.toggle("toggle");
+
+    }
+   
   
     }
     )
@@ -46,6 +58,8 @@ function fetchDetails(city){
 function renderDetails(data_set){
 
     const result_form = document.getElementById("result_form")
+
+    
     
     result_form["time_zone"].value = data_set.timezone.name
     result_form["lat"].value = data_set.lat
@@ -55,11 +69,9 @@ function renderDetails(data_set){
     result_form["offset_dst_sec"].value = data_set.timezone.offset_DST_seconds
     result_form["country"].value = data_set.country
     result_form["post_code"].value = data_set.postcode
-    result_form["city"].value = data_set.city
+    result_form["city"].value = data_set.county
 
-    result_form.classList.toggle("toggle")
-
-
+    result_form.setAttribute("style","display:block")
 
 }
 
