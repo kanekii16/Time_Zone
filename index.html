@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top_div">
+         <div class="heading">   
+            <h1>Time Zone API</h1>
+            <h2 id="time_zone_current"></h2>
+            </div>
+         
+        
+            <form id="current_time">
+        
+                <label for="time_zone">Name Of Time Zone :</label>
+                <input type="text" name="time_zone" class="hide">
+        
+                <br>
+               
+                    <label for="lat">Lat :</label>
+                    <input type="text" name="lat" class="hide">
+        
+                    <label for="long">Long :</label>
+                    <input type="text" name="long" class="hide">  
+               
+                <br>
+        
+        
+                <label for="offset_std">Offset STD: </label>
+                <input type="text" name="offset_std" class="hide">
+        
+                <br>
+        
+                <label for="offset_dst">Offset DST: </label>
+                <input type="text"  name="offset_dst"  class="hide">
+        
+                <br>
+        
+                <label for="offset_dst_sec">Offset DST Seconds: </label>
+                <input type="text" name="offset_dst_sec" class="hide">
+        
+                <br>
+        
+                <label for="country">Country: </label>
+                <input type="text" name="country" class="hide">
+        
+                <br>
+        
+                <label for="post_code">Post Code: </label>
+                <input type="text" name="post_code" class="hide">
+        
+                <br>
+        
+                <label for="city">City: </label>
+                <input type="text" name="city" class="hide">
+        
+        
+        
+            </form>
+    </div>
+
+
+
+
+
+
+
+ 
+    <h2 class="heading">Enter Address</h2>
+
+    <input class="heading " id="addressBox" placeholder="Address" type="text" >
+
+    <br>
+
+    <label class="city_empty">Please enter an address!</label>
+
+
+    <br>
+
+    <button id="submitBtn">Submit</button>
+
+
+
+    <form id="result_form" class="display_form">
+
+        <label for="time_zone">Name Of Time Zone :</label>
+        <input type="text" name="time_zone" class="hide">
+
+        <br>
+       
+            <label for="lat">Lat :</label>
+            <input type="text" name="lat" class="hide">
+
+            <label for="long">Long :</label>
+            <input type="text" name="long" class="hide">  
+       
+        <br>
+
+
+        <label for="offset_std">Offset STD: </label>
+        <input type="text" name="offset_std" class="hide">
+
+        <br>
+
+        <label for="offset_dst">Offset DST: </label>
+        <input type="text"  name="offset_dst"  class="hide">
+
+        <br>
+
+        <label for="offset_dst_sec">Offset DST Seconds: </label>
+        <input type="text" name="offset_dst_sec" class="hide">
+
+        <br>
+
+        <label for="country">Country: </label>
+        <input type="text" name="country" class="hide">
+
+        <br>
+
+        <label for="post_code">Post Code: </label>
+        <input type="text" name="post_code" class="hide">
+
+        <br>
+
+        <label for="city">City: </label>
+        <input type="text" name="city" class="hide">
+
+
+
+    </form>
+
+
+    <script src="current.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

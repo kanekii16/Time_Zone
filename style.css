@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: grey;
+}
+
+
+.top_div{
+    background-color: white;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.top_div > form > input{
+    background-color: white;
+    
+}
+
+.hide{
+   border: none;
+   width: 100px;
+}
+
+.heading{
+    margin-left: 20px;
+}
+
+#addressBox{
+    width: 80%;
+}
+
+form{
+    border: 1px solid gray;
+    margin: 20px;
+    padding: 20px;
+}
+
+form > input {
+    width: 200px;
+    margin: 10px;
+    background-color: black;
+    color: gray;
+
+}
+
+.display_form{
+    display: none;
+}
+
+.city_empty{
+    font-weight: bold;
+    color: red;
+    margin: 20px;
+    display: none;
+}
+
+.toggle{
+    display: block;
+}
+
+#submitBtn{
+    margin: 20px;
+    width: 200px;
+    padding-left: 10px ;
+    padding-right:10px;
+}
+
+
